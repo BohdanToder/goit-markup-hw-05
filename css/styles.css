@@ -166,12 +166,28 @@ svg {
 	color: var(--secondary-text-color);
 }
 
-.current-page,
 .header-link:hover,
 .header-link:focus,
 .footer-link:hover,
 .footer-link:focus {
 	color: var(--accent-text-color);
+}
+
+.current-page {
+	position: relative;
+	color: var(--accent-text-color);
+}
+
+.current-page::after {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	display: block;
+
+	width: 100%;
+	height: 4px;
+	border-radius: 2px;
+	background-color: var(--accent-text-color);
 }
 
 /* ------------Мейн Студио------------ */
@@ -271,6 +287,11 @@ svg {
 
 .speciality-title {
 	margin-bottom: 50px;
+
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.17;
+	text-align: center;
 }
 
 .speciality-list {
@@ -284,11 +305,26 @@ svg {
 	margin-right: 30px;
 }
 
-.speciality-title {
+.speciality-thumb {
+	position: relative;
+}
+
+.speciality-item-title {
+	position: absolute;
+	bottom: 0px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70px;
+
 	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.17;
-	text-align: center;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--just-white-color);
+	background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Наша команда */
